@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "ShopFix",
+  "version": "2025.8.7",
+  "author":"Lucas Aureliano",
+  "description": "Torna a Shopee mais acessível para usuários de leitores de tela",
+  "permissions": [],
+  "host_permissions": [
+    "https://shopee.com.br/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://shopee.com.br/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "shopfix@lucasaureliano.com"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png"
+    },
+    "default_title": "ShopFix"
+  }
+}
